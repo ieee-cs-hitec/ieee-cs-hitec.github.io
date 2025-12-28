@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "pics/uploads"
+public_folder: "/pics/uploads"
+
+collections:
+  - name: "team"
+    label: "Team Members"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "select", options: ["Faculty Head", "Chairperson", "Vice Chairperson", "Secretary", "Ambassador"] }
+      - { label: "Department", name: "department", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Photos", name: "photos", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+      - { label: "Videos", name: "videos", widget: "list", field: { label: "Video URL", name: "url", widget: "string" }, required: false }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General"
+        name: "general"
+        file: "content/settings/general.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Contact Email", name: "email", widget: "string" }

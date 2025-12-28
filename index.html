@@ -7,6 +7,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>IEEE CS HITEC University</title>
+    <link rel="icon" href="pics/IEEE_CS_logo.jpg" type="image/jpeg">
     <style>
         * {
             margin: 0;
@@ -322,21 +323,18 @@
             margin-top: 40px;
         }
 
-        /* Keep faculty head card the same width as other cards */
-        .faculty-grid .team-card {
-            max-width: 420px;
-            margin: 0 auto;
-        }
+        /* (removed faculty-grid rule so faculty card uses the same sizing as other team cards) */
 
         .team-card {
-            background: white;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 60%);
             border-radius: 20px;
             padding: 40px 30px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            color: #ffffff;
         }
 
         .team-card::before {
@@ -387,19 +385,19 @@
 
         .team-card h3 {
             font-size: 24px;
-            color: #2c3e50;
+            color: #ffffff;
             margin-bottom: 10px;
         }
 
         .team-card .role {
-            color: #3498db;
+            color: rgba(255,255,255,0.9);
             font-weight: 600;
             font-size: 16px;
             margin-bottom: 5px;
         }
 
         .team-card .department {
-            color: #7f8c8d;
+            color: rgba(255,255,255,0.8);
             font-size: 14px;
             margin-top: 5px;
             font-style: italic;
@@ -409,16 +407,17 @@
             display: inline-block;
             margin-top: 15px;
             padding: 10px 20px;
-            background: #0077b5;
-            color: white;
+            background: #ffffff;
+            color: #1e3c72;
             border-radius: 25px;
             text-decoration: none;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
 
         .team-card .linkedin:hover {
-            background: #005885;
-            transform: scale(1.05);
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
         }
 
         /* Events Section */
@@ -622,7 +621,7 @@
                     <img src="pics/IEEE_CS_logo.jpg" alt="IEEE CS Logo">
                 </div>
                 <div class="logo-text">
-                    <h1>IEEE CS HITEC</h1>
+                    <h1>IEEE CS HITEC University</h1>
                     <p>Student Branch Chapter</p>
                 </div>
             </div>
@@ -662,7 +661,7 @@
         <h2 class="section-title">Our Executive Committee 2025-26</h2>
         
         <!-- Faculty Head -->
-        <div class="team-grid fade-in faculty-grid">
+        <div class="team-grid fade-in">
             <div class="team-card">
                 <div class="team-photo">
                     <img src="pics/Executive/mamFadia_Facaulty_head.jpg" alt="Dr. Fadia">
@@ -677,19 +676,19 @@
         <div class="team-grid fade-in" style="margin-top: 60px;">
             <div class="team-card">
                 <div class="team-photo">
-                    <img src="pics/Executive/Chairperson.jpeg" alt="Syed Sarmad Shah">
-                </div>
-                <h3>Syed Sarmad Shah</h3>
-                <p class="role">Chairperson</p>
-                <a href="https://www.linkedin.com/in/syed-sarmad-shah2225/" target="_blank" class="linkedin">LinkedIn</a>
-            </div>
-            <div class="team-card">
-                <div class="team-photo">
                     <img src="pics/Executive/Emmar_ViceChairperson.jpeg" alt="Emmar Ejaz">
                 </div>
                 <h3>Emmar Ejaz</h3>
                 <p class="role">Vice Chairperson</p>
                 <a href="https://www.linkedin.com/in/emaar/" target="_blank" class="linkedin">LinkedIn</a>
+            </div>
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="pics/Executive/Chairperson.jpeg" alt="Syed Sarmad Shah">
+                </div>
+                <h3>Syed Sarmad Shah</h3>
+                <p class="role">Chairperson</p>
+                <a href="https://www.linkedin.com/in/syed-sarmad-shah2225/" target="_blank" class="linkedin">LinkedIn</a>
             </div>
             <div class="team-card">
                 <div class="team-photo">
@@ -732,8 +731,8 @@
                 <a href="#" class="linkedin">LinkedIn</a>
             </div>
             <div class="team-card">
-                <div class="team-photo no-image">
-                    WN
+                <div class="team-photo">
+                    <img src="pics/Ambassadors/Waniya_Naveed.jpeg" alt="Waniya Naveed">
                 </div>
                 <h3>Waniya Naveed</h3>
                 <p class="role">Ambassador</p>
@@ -741,8 +740,8 @@
                 <a href="#" class="linkedin">LinkedIn</a>
             </div>
             <div class="team-card">
-                <div class="team-photo no-image">
-                    ZA
+                <div class="team-photo">
+                    <img src="pics/Ambassadors/Zain%20Ul%20Abdin.jpeg" alt="Zain ul Abdin">
                 </div>
                 <h3>Zain ul Abdin</h3>
                 <p class="role">Ambassador</p>

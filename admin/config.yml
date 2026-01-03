@@ -1,35 +1,22 @@
 backend:
-  name: github
-  repo: SyedSarmadShah/IEEE-CS-website  # YOUR GitHub username/repo
+  name: git-gateway
   branch: main
 
 media_folder: "pics/uploads"
 public_folder: "/pics/uploads"
 
 collections:
-  - name: "team_executive"
-    label: "Executive Committee"
-    folder: "content/team/executive"
+  - name: "team"
+    label: "Team Members"
+    folder: "content/team"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Name", name: "name", widget: "string" }
-      - { label: "Role", name: "role", widget: "select", options: ["Faculty Head", "Chairperson", "Vice Chairperson", "Secretary"] }
+      - { label: "Role", name: "role", widget: "select", options: ["Faculty Head", "Chairperson", "Vice Chairperson", "Secretary", "Ambassador"] }
+      - { label: "Department", name: "department", widget: "string", required: false }
       - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
       - { label: "Photo", name: "photo", widget: "image" }
-      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
-
-  - name: "team_ambassadors"
-    label: "Ambassadors"
-    folder: "content/team/ambassadors"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Department", name: "department", widget: "string" }
-      - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
-      - { label: "Photo", name: "photo", widget: "image" }
-      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
 
   - name: "events"
     label: "Events"

@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ieee-cs-hitec/ieee-cs-hitec.github.io
   branch: main
 
 media_folder: "pics/uploads"
